@@ -110,6 +110,9 @@ export const GET = async (
             where: {
                 id: params.categoryId,
             },
+            include: {
+                billboard: true,
+            },
         });
 
         return NextResponse.json(billboard);
